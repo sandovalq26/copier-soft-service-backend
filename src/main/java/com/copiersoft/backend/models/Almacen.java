@@ -9,20 +9,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "ALMACEN")
+@Table(name = "almacen")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Almacen {
 
     @Id
-    @Column(name = "COD_ALMACEN", length = 5, nullable = false)
+    @Column(name = "cod_almacen", length = 5, nullable = false)
     private String codAlmacen;
 
-    @Column(name = "NOMBRE", length = 50, nullable = false)
+    @Column(name = "nombre", length = 50, nullable = false)
     private String nombre;
 
-    @Column(name = "DIRECCION", length = 250, nullable = false)
+    @Column(name = "direccion", length = 250, nullable = false)
     private String direccion;
 
 }

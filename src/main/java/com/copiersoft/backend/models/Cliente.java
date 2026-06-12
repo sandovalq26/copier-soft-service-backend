@@ -11,38 +11,38 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "CLIENTE")
+@Table(name = "cliente")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cliente {
 
     @Id
-    @Column(name = "COD_CLIENTE", length = 5, nullable = false)
+    @Column(name = "cod_cliente", length = 5, nullable = false)
     private String codCliente;
 
-    @Column(name = "TIPO_DOCUMENTO", length = 3, nullable = false)
+    @Column(name = "tipo_documento", length = 3, nullable = false)
     private String tipoDocumento;
 
-    @Column(name = "NUMERO_DOCUMENTO", length = 15, nullable = false)
+    @Column(name = "numero_documento", length = 15, nullable = false)
     private String numeroDocumento;
 
-    @Column(name = "NOMBRES", length = 50, nullable = false)
+    @Column(name = "nombres", length = 50, nullable = false)
     private String nombres;
 
-    @Column(name = "APELLIDOS", length = 100, nullable = false)
+    @Column(name = "apellidos", length = 100, nullable = false)
     private String apellidos;
 
-    @Column(name = "DIRECCION", length = 250)
+    @Column(name = "direccion", length = 250)
     private String direccion;
 
-    @Column(name = "TELEFONO", length = 30)
+    @Column(name = "telefono", length = 30)
     private String telefono;
 
-    @Column(name = "CORREO", length = 150)
+    @Column(name = "correo", length = 150)
     private String correo;
 
-    @Column(name = "FECHA_REGISTRO", nullable = false)
+    @Column(name = "fecha_registro", nullable = false)
     private LocalDate fechaRegistro;
 
 }

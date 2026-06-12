@@ -9,17 +9,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "MEDIO_PAGO")
+@Table(name = "medio_pago")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedioPago {
 
     @Id
-    @Column(name = "COD_MEDIO_PAGO", length = 6, nullable = false)
+    @Column(name = "cod_medio_pago", length = 6, nullable = false)
     private String codMedioPago;
 
-    @Column(name = "NOMBRE", length = 100, nullable = false, unique = true)
+    @Column(name = "nombre", length = 100, nullable = false, unique = true)
     private String nombre;
 
 }

@@ -10,50 +10,50 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "ALQUILER")
+@Table(name = "alquiler")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Alquiler {
 
     @Id
-    @Column(name = "COD_ALQUILER", length = 6, nullable = false)
+    @Column(name = "cod_alquiler", length = 6, nullable = false)
     private String codAlquiler;
 
     @ManyToOne
-    @JoinColumn(name = "COD_EMPLEADO", nullable = false)
+    @JoinColumn(name = "cod_empleado", nullable = false)
     private Empleado empleado;
 
     @ManyToOne
-    @JoinColumn(name = "COD_CLIENTE", nullable = false)
+    @JoinColumn(name = "cod_cliente", nullable = false)
     private Cliente cliente;
 
-    @Column(name = "FECHA_INICIO", nullable = false)
+    @Column(name = "fecha_inicio", nullable = false)
     private LocalDate fechaInicio;
 
-    @Column(name = "FECHA_FIN", nullable = false)
+    @Column(name = "fecha_fin", nullable = false)
     private LocalDate fechaFin;
 
-    @Column(name = "PERIODO", length = 15, nullable = false)
+    @Column(name = "periodo", length = 15, nullable = false)
     private String periodo;
 
-    @Column(name = "VALOR_PERIODO", nullable = false)
+    @Column(name = "valor_periodo", nullable = false)
     private Integer valorPeriodo;
 
-    @Column(name = "PRECIO", precision = 11, scale = 2, nullable = false)
+    @Column(name = "precio", precision = 11, scale = 2, nullable = false)
     private BigDecimal precio;
 
-    @Column(name = "ESTADO", length = 30, nullable = false)
+    @Column(name = "estado", length = 30, nullable = false)
     private String estado;
 
-    @Column(name = "FECHA_REGISTRO", nullable = false)
+    @Column(name = "fecha_registro", nullable = false)
     private LocalDate fechaRegistro;
 
     @ManyToMany
     @JoinTable(
-            name = "ALQUILER_FOTOCOPIADORA",
-            joinColumns = @JoinColumn(name = "COD_ALQUILER"),
-            inverseJoinColumns = @JoinColumn(name = "COD_FOTOCOPIADORA")
+            name = "alquiler_fotocopiadora",
+            joinColumns = @JoinColumn(name = "cod_alquiler"),
+            inverseJoinColumns = @JoinColumn(name = "cod_fotocopiadora")
     )
     private List<Fotocopiadora> fotocopiadoras;
 }

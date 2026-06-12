@@ -9,26 +9,26 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "PROVEEDOR")
+@Table(name = "proveedor")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Proveedor {
 
     @Id
-    @Column(name = "COD_PROVEEDOR", length = 5, nullable = false)
+    @Column(name = "cod_proveedor", length = 5, nullable = false)
     private String codProveedor;
 
-    @Column(name = "RUC_EMPRESA", length = 11, nullable = false, unique = true)
+    @Column(name = "ruc_empresa", length = 11, nullable = false, unique = true)
     private String rucEmpresa;
 
-    @Column(name = "RAZON_SOCIAL", length = 150, nullable = false)
+    @Column(name = "razon_social", length = 150, nullable = false)
     private String razonSocial;
 
-    @Column(name = "DIRECCION", length = 250)
+    @Column(name = "direccion", length = 250)
     private String direccion;
 
-    @Column(name = "CORREO", length = 100)
+    @Column(name = "correo", length = 100)
     private String correo;
 
 }
