@@ -276,7 +276,7 @@ BEGIN
     DECLARE v_max  INT DEFAULT 0;
     DECLARE v_next INT;
 
-    IF new.cod_alquiler = '' then
+    IF new.cod_alquiler = '' OR new.cod_alquiler IS NULL then
         -- extraer la parte numérica del código más alto existente
         SELECT COALESCE(MAX(CAST(SUBSTRING(cod_alquiler, 3) AS UNSIGNED)), 0)
           INTO v_max
@@ -307,7 +307,7 @@ BEGIN
     DECLARE v_max  INT DEFAULT 0;
     DECLARE v_next INT;
 
-    IF new.cod_pago = '' then
+    IF new.cod_pago = '' OR new.cod_pago IS NULL then
         -- extraer la parte numérica del código más alto existente
         SELECT COALESCE(MAX(CAST(SUBSTRING(cod_pago, 3) AS UNSIGNED)), 0)
           INTO v_max
@@ -338,7 +338,7 @@ BEGIN
     DECLARE v_max  INT DEFAULT 0;
     DECLARE v_next INT;
 
-    IF new.cod_fotocopiadora = '' then
+    IF new.cod_fotocopiadora = '' OR new.cod_fotocopiadora IS NULL then
         SELECT COALESCE(MAX(CAST(SUBSTRING(cod_fotocopiadora, 2) AS UNSIGNED)), 0)
           INTO v_max
           FROM fotocopiadora;
@@ -368,7 +368,7 @@ BEGIN
     DECLARE v_max  INT DEFAULT 0;
     DECLARE v_next INT;
 
-    IF new.cod_proveedor = '' then
+    IF new.cod_proveedor = '' OR new.cod_proveedor IS NULL then
         SELECT COALESCE(MAX(CAST(SUBSTRING(cod_proveedor, 2) AS UNSIGNED)), 0)
           INTO v_max
           FROM proveedor;
@@ -398,7 +398,7 @@ BEGIN
     DECLARE v_max  INT DEFAULT 0;
     DECLARE v_next INT;
 
-    IF new.cod_empleado = '' then
+    IF new.cod_empleado = '' OR new.cod_empleado IS NULL then
         SELECT COALESCE(MAX(CAST(SUBSTRING(cod_empleado, 2) AS UNSIGNED)), 0)
           INTO v_max
           FROM empleado;
@@ -428,7 +428,7 @@ BEGIN
     DECLARE v_max  INT DEFAULT 0;
     DECLARE v_next INT;
 
-    IF new.cod_cliente = '' then
+    IF new.cod_cliente = '' OR new.cod_cliente IS NULL then
         SELECT COALESCE(MAX(CAST(SUBSTRING(cod_cliente, 2) AS UNSIGNED)), 0)
           INTO v_max
           FROM cliente;
