@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface AlquilerRepository extends JpaRepository<Alquiler, String> {
     List<Alquiler> findTop5ByOrderByFechaRegistroDesc();
+    List<Alquiler> findByEstado(String estado);
 }
