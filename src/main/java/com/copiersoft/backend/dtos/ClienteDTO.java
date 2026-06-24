@@ -1,6 +1,7 @@
 // Erick_Alquileres
 package com.copiersoft.backend.dtos;
 
+import com.copiersoft.backend.enums.TipoDocumento;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ClienteDTO {
     private String codCliente;
-    private String tipoDocumento;
+    private TipoDocumento tipoDocumento;
     private String numeroDocumento;
     private String nombres;
     private String apellidos;
